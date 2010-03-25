@@ -1,0 +1,22 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>ch.qos.starwars</groupId>
+   <version>1.0</version>
+   <artifactId>starwars-parent</artifactId>
+   <packaging>pom</packaging>
+
+   <name>star</name>
+   <modules>
+      <module>shared</module>
+      <module>kenobi</module>
+   </modules>
+  
+  <properties>
+    <lb.version>0.9.19</lb.version>
+  </properties>
+  
+   <build>
+   </build>
+  
+</project>

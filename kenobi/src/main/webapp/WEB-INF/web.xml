@@ -1,0 +1,40 @@
+<web-app id="kenobi" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+
+  <display-name>kenobi</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>KenobiServlet</servlet-name>
+    <servlet-class>ch.qos.starwars.kenobi.KenobiServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>KenobiServlet</servlet-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </servlet-mapping>
+
+
+
+  <env-entry>
+    <description>JNDI logging context for this app</description>
+    <env-entry-name>logback/context-name</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>kenobi</env-entry-value>
+  </env-entry>
+
+  <!-- 
+    <env-entry>
+    <description>URL for configuring logback context</description>
+    <env-entry-name>logback/configuration-resource</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>logback-kenobi.xml</env-entry-value>
+    </env-entry>
+  -->
+
+</web-app>
