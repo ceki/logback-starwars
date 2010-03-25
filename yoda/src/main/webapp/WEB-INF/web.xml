@@ -3,19 +3,19 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 
-  <display-name>kenobi</display-name>
+  <display-name>yoda</display-name>
 
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
 
   <servlet>
-    <servlet-name>KenobiServlet</servlet-name>
-    <servlet-class>ch.qos.starwars.kenobi.KenobiServlet</servlet-class>
+    <servlet-name>YodaServlet</servlet-name>
+    <servlet-class>ch.qos.starwars.yoda.YodaServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>KenobiServlet</servlet-name>
+    <servlet-name>YodaServlet</servlet-name>
     <url-pattern>/servlet/*</url-pattern>
   </servlet-mapping>
 
@@ -25,7 +25,7 @@
     <description>JNDI logging context for this app</description>
     <env-entry-name>logback/context-name</env-entry-name>
     <env-entry-type>java.lang.String</env-entry-type>
-    <env-entry-value>kenobi</env-entry-value>
+    <env-entry-value>yoda</env-entry-value>
   </env-entry>
 
   <env-entry>
@@ -34,5 +34,6 @@
     <env-entry-type>java.lang.String</env-entry-type>
     <env-entry-value>logback.xml</env-entry-value>
   </env-entry>
+
 
 </web-app>

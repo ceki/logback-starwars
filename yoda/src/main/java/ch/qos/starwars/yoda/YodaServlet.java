@@ -11,7 +11,7 @@
  * under the terms of the GNU Lesser General Public License version 2.1
  * as published by the Free Software Foundation.
  */
-package ch.qos.starwars.kenobi;
+package ch.qos.starwars.yoda;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 import ch.qos.starwars.shared.Mustafar;
 
-public class KenobiServlet extends HttpServlet {
+public class YodaServlet extends HttpServlet {
 
   private static final long serialVersionUID = 1L;
 
@@ -36,6 +36,7 @@ public class KenobiServlet extends HttpServlet {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
     logger.debug("in doGet()");
+    
     
     res.setContentType("text/html");
     PrintWriter out = res.getWriter();
