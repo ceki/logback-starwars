@@ -1,0 +1,39 @@
+
+Given that this project's goal is to illustrate logging separation in
+presence of shared libraries located on a shared class path, the
+following artifacts must be placed in the common class path of your
+web-server. 
+
+Assuming your web-server is Tomcat 6, place following files
+
+  shared-1.0.jar   // the shared library built by this project
+  slf4j-api-1.5.11.jar
+  logback-core-0.9.19.jar
+  logback-classic-0.9.19.jar
+
+under $TOMCAT6_HOME/lib.
+
+The shared-1.0.jar artifact can be obtained by building this project,
+that is by launching the 'mvn package' command.
+
+To add yoda and kebobi to your web-app, add the following to your
+Tomcat server's conf/server.xml file under the appropriate <host>:
+
+    <Context docBase="some_path../logback-starwars/kenobi/target/kenobi" 
+                path="/kenobi"/>
+
+    <Context docBase="some_path.../logback-starwars/yoda/target/yoda" 
+                path="/yoda"/>
+
+where "some_path..." the folder containing the logback-starwars
+project.
+
+Enabling ContextJNDISelector
+============================
+
+To enable ContextJNDISelector you need to add 
+
+  JAVA_OPTS="$JAVA_OPTS -Dlogback.ContextSelector=JNDI"
+
+to Tomcat's catalina.sh script.
+
