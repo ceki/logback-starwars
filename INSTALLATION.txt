@@ -37,3 +37,29 @@ To enable ContextJNDISelector you need to add
 
 to Tomcat's catalina.sh script.
 
+
+Location of logback.xml
+=======================
+
+By default, if a context is named foobar, ContextJNDISelector will
+configure the the logging context for fooback from a file named
+logback-foobar.xml. To keep things simple, we assume you override this
+convention so that all context will use the same configuration
+file. Here the snippet you should place in each web-applications
+web/xml file:
+
+<env-entry>
+  <env-entry-name>logback/configuration-resource</env-entry-name>
+  <env-entry-type>java.lang.String</env-entry-type>
+  <env-entry-value>logback.xml</env-entry-value>
+</env-entry>
+
+The logback.xml file should then be placed under $TOMCAT6_HOME/lib.
+
+Questions?
+==========
+
+Please address your questions to the logback-user@qos.ch mailing list.
+
+
+
